@@ -1,0 +1,21 @@
+{
+    "name": "iView Leanback",
+    "version": "1.0",
+    "description": "Browse ABC iView with ease",
+    "manifest_version": 2,
+    "permissions":[
+        "webNavigation",
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://iview.abc.net.au/*"],
+            "exclude_matches": ["https://iview.abc.net.au/show/*"],
+            "js": ["iview_main.js"]
+        },
+        {
+            "matches": ["https://iview.abc.net.au/show/*"],
+            "js": ["iview_show.js"]
+        }
+    ]
+}
